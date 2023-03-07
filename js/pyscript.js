@@ -12185,7 +12185,7 @@ var pyscript = (function (exports) {
                 // are, for some reason, drawn behind the element content, which
                 // will cause things like the active line background to cover
                 // the outline (#297).
-                outline: "1px dotted #212121"
+                outline: "1px dotted #011627"
             },
             display: "flex !important",
             flexDirection: "column"
@@ -12196,7 +12196,7 @@ var pyscript = (function (exports) {
             fontFamily: "monospace",
             lineHeight: 1.4,
             height: "100%",
-            overflowX: "auto",
+            //overflowX: "auto",
             position: "relative",
             zIndex: 0
         },
@@ -13075,7 +13075,7 @@ var pyscript = (function (exports) {
             this.measureRequests = [];
             this.contentDOM = document.createElement("div");
             this.scrollDOM = document.createElement("div");
-            this.scrollDOM.tabIndex = -1;
+            this.scrollDOM.tabIndex = 0;
             this.scrollDOM.className = "cm-scroller";
             this.scrollDOM.appendChild(this.contentDOM);
             this.announceDOM = document.createElement("div");
@@ -26219,7 +26219,7 @@ var pyscript = (function (exports) {
         ".cm-panels.cm-panels-bottom": { borderTop: "2px solid black" },
         ".cm-searchMatch": {
             backgroundColor: "#72a1ff59",
-            outline: "1px solid #457dff"
+            outline: "0.01px solid #457dff"
         },
         ".cm-searchMatch.cm-searchMatch-selected": {
             backgroundColor: "#6199ff2f"
@@ -27073,6 +27073,7 @@ autoclose = false
             const runtime_cfg = this.config.runtimes[0];
             this.runtime = new PyodideRuntime(this.config, this._stdioMultiplexer, runtime_cfg.src, runtime_cfg.name, runtime_cfg.lang);
             this.logStatus(`Downloading ${runtime_cfg.name}...`);
+            this.logStatus('does this work?');
             // download pyodide by using a <script> tag. Once it's ready, the
             // "load" event will be fired and the exeuction logic will continue.
             // Note that the load event is fired asynchronously and thus any

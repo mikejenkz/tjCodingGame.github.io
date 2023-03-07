@@ -1,3 +1,11 @@
+body {
+    /* animation: hue-rotate 6s infinite; */
+    background-image: url('/resources/main\ screen.png');
+    background-size: 100% 100%;
+    /* -webkit-filter: grayscale(0%); */
+    /* z-index: -1; */
+  }
+
 /* py-config - not a component */
 py-config {
     display: none
@@ -161,14 +169,17 @@ border: none;
 }
 
 .py-repl-box {
-    flex-direction: column;
     width: 50%;
     background-color: #011627;
     color: #d6deeb;
-    overflow-y: auto;
+    overflow: scroll;
+    overflow-anchor:auto;
     height: 45%;
+    margin-top: 4.5%;
+    margin-left: 2.5%;
     
 }
+
 
 /* ::-webkit-scrollbar {
     background: yellowgreen;
@@ -183,7 +194,7 @@ border: none;
     background: black;
   }
 
-/* Handle on hover */
+ Handle on hover */
 /* ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }  */
@@ -350,13 +361,27 @@ textarea {
 
 .py-terminal {
     min-height: 10em;
-    width: 49%;
+    width: 48.3%;
     background-color: black;
     color: white;
     padding: 0.5rem;
     overflow: auto;
+    height: 20%;
+    overflow: scroll;
+    margin-left: 2.5%;
+    margin-top: .5%;
+    
 }
 
 .py-terminal-hidden {
     display: none;
+}
+
+.box {
+    position: absolute;
+    margin-left: 53%;
+    margin-top: -22.5%;
+    width: 42%;
+    height: 67%;
+    background-color: white;
 }
