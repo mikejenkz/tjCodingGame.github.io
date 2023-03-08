@@ -1,6 +1,6 @@
 body {
     /* animation: hue-rotate 6s infinite; */
-     background-image: url('/resources/main\ screen.png');  
+     /* background-image: url('/resources/main\ screen.png');   */
     background-size: cover;
     /* -webkit-filter: grayscale(0%); */
     /* z-index: -1; */
@@ -169,13 +169,13 @@ border: none;
 }
 
 .py-repl-box {
-    width: 41vw;
+    width: 100%;
     background-color: #011627;
     color: #d6deeb;
     overflow: auto;
-    height: 43vh;
+    height: 100%;
     /* margin-top: 4.5%; */
-    margin-left: 2.5%;
+    /* margin-left: 2.5%; */
     
 }
 
@@ -365,9 +365,9 @@ textarea {
     color: white;
 
     overflow: auto;
-    width: 41vw;
-    height: 32vh;
-    margin-left: 1%;
+    width: 43vw;
+    height: 32.5vh;
+    /* margin-left: 1%; */
 
     
 }
@@ -394,6 +394,16 @@ box {
 
   }
   .grid-item {
-    background-color: crimson;
-    border: 1px solid white;
+    background-color: transparent;
+    border:  solid black;
   }
+
+.img1{
+    height: 100%;
+    width: 100%;
+}
+
+.img2{
+    height: 100%;
+    width: 100%;
+}
