@@ -1,10 +1,18 @@
-body {
-    /* animation: hue-rotate 6s infinite; */
-     /* background-image: url('/resources/main\ screen.png');   */
-    background-size: cover;
-    /* -webkit-filter: grayscale(0%); */
-    /* z-index: -1; */
-  }
+ body {
+     animation: hue-rotate 6s infinite; 
+    /* background-image: url('/resources/one\ screen.jpeg');     */
+      background-color: rgb(29, 28, 27); 
+     /* background-size: 100% 100%; */
+     
+
+ }
+
+.bimg{
+    position:absolute;
+    height: 5%;
+    width: 5%;
+
+}
 
 /* py-config - not a component */
 py-config {
@@ -174,7 +182,7 @@ border: none;
     color: #d6deeb;
     overflow: auto;
     height: 100%;
-    font-size: 1.9em;
+    font-size: 1.5em;
     /* margin-top: 4.5%; */
     /* margin-left: 2.5%; */
     
@@ -366,7 +374,7 @@ textarea {
     color: white;
 
     overflow: auto;
-    width: 43vw;
+    width: 42vw;
     height: 32.5vh;
     /* margin-left: 1%; */
 
@@ -387,17 +395,57 @@ box {
 }
 
 .grid-container {
-    display: grid;
+    display: inline-grid;
     grid-template-columns: 43vw 42vw;
     grid-template-rows: 43vh 33vh;
     margin-top: 5%;
-    margin-left: 5%;
+    margin-left: 7%;
+    outline-style: solid;
+    outline-width: 10px;
+    border-radius: 1rem;
+    outline-color: black;
+    
 
   }
   .grid-item {
     background-color: transparent;
     border:  solid black;
   }
+
+
+  .grid-item3 {
+    background-image: url('/resources/Cyberpunk Backgrounds/Street lamp.png'); 
+    background-size: 100% 100%;  
+    background-color: transparent;
+    filter: brightness(100%);
+    border:  solid ;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+
+  .typed{
+    color: wheat;
+    font-size: xx-large;
+    font-family: papyrus;
+    overflow: hidden;
+    filter: brightness(145%);
+    font-weight: bold;
+  }
+    /* white-space: nowrap;
+    animation: typing 5s;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-timing-function: steps(100, end);
+    animation-fill-mode: both;
+  }
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width:100%; }
+} */
+
+
 
 .img1{
     height: 100%;
@@ -408,3 +456,26 @@ box {
     height: 100%;
     width: 100%;
 }
+
+.arrow {
+    border: solid white;
+    border-width: 0 .7em .7em 0;
+    display: inline-block;
+    padding: 1em;
+  }
+  
+  .right {
+    position: absolute;
+    top: 80%;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    margin-left: 80%;
+  }
+
+  .left {
+    position: absolute;
+    top: 80%;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    margin-left: 10%;
+  }

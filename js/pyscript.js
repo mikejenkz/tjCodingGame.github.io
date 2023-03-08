@@ -1,3 +1,13 @@
+function myFunction() {
+    document.getElementById("first").innerHTML = "A faction known as shadow-coders controls everything, you’re not sure how many times you’ve tried to stop them. The shadow-coders have caught you in every attempt you’ve made in the past, and each time given you a fate worse than death: technical memory wipe. But you must try again..";
+    document.getElementById("first").id = "second"
+
+}
+function myFunctionBack() {
+    document.getElementById('second').innerHTML = "The year is 2148, the technology meant to send mankind into its golden age instead created the world you see now, and in this world, code is all that matters. Those who know how to code control the security forces, the money, the food production plants–the entire world."
+    document.getElementById('second').id = "first"
+}
+
 var pyscript = (function (exports) {
     'use strict';
 
@@ -26264,7 +26274,7 @@ var pyscript = (function (exports) {
     }, { dark: true });
 
     const logger$8 = getLogger('py-repl');
-    const RUNBUTTON = `<svg style="height:20px;width:20px;vertical-align:-.125em;transform-origin:center;overflow:visible;color:white" viewBox="0 0 384 512" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg"><g transform="translate(192 256)" transform-origin="96 0"><g transform="translate(0,0) scale(1,1)"><path d="M361 215C375.3 223.8 384 239.3 384 256C384 272.7 375.3 288.2 361 296.1L73.03 472.1C58.21 482 39.66 482.4 24.52 473.9C9.377 465.4 0 449.4 0 432V80C0 62.64 9.377 46.63 24.52 38.13C39.66 29.64 58.21 29.99 73.03 39.04L361 215z" fill="currentColor" transform="translate(-192 -256)"></path></g></g></svg>`;
+    const RUNBUTTON = `<svg style="height:30px;width:30px;vertical-align:-.125em;transform-origin:center;overflow:visible;color:yellowgreen" viewBox="0 0 384 512" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg"><g transform="translate(192 256)" transform-origin="96 0"><g transform="translate(0,0) scale(1,1)"><path d="M361 215C375.3 223.8 384 239.3 384 256C384 272.7 375.3 288.2 361 296.1L73.03 472.1C58.21 482 39.66 482.4 24.52 473.9C9.377 465.4 0 449.4 0 432V80C0 62.64 9.377 46.63 24.52 38.13C39.66 29.64 58.21 29.99 73.03 39.04L361 215z" fill="currentColor" transform="translate(-192 -256)"></path></g></g></svg>`;
     function make_PyRepl(runtime) {
         /* High level structure of py-repl DOM, and the corresponding JS names.
 
@@ -26748,6 +26758,7 @@ var pyscript = (function (exports) {
         stdout_writeline(msg) {
             for (const obj of this._listeners)
                 obj.stdout_writeline(msg);
+            // console.log(stud_answer._listeners.py-terminal.autoShowOnNextLine)
         }
         stderr_writeline(msg) {
             for (const obj of this._listeners)
@@ -27076,7 +27087,6 @@ autoclose = false
             const runtime_cfg = this.config.runtimes[0];
             this.runtime = new PyodideRuntime(this.config, this._stdioMultiplexer, runtime_cfg.src, runtime_cfg.name, runtime_cfg.lang);
             this.logStatus(`Downloading ${runtime_cfg.name}...`);
-            this.logStatus('does this work?');
             // download pyodide by using a <script> tag. Once it's ready, the
             // "load" event will be fired and the exeuction logic will continue.
             // Note that the load event is fired asynchronously and thus any
@@ -27255,6 +27265,9 @@ modules must contain a "plugin" attribute. For more information check the plugin
     Object.defineProperty(exports, '__esModule', { value: true });
 
     return exports;
+    
 
 })({});
+
+
 //# sourceMappingURL=pyscript.js.map
