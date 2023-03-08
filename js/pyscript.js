@@ -26819,8 +26819,11 @@ var pyscript = (function (exports) {
                 // should we use a shadowRoot instead? It looks unnecessarily
                 // complicated to me, but I'm not really sure about the
                 // implications
-                this.outElem = document.createElement('pre');
+                this.outElem = document.createElement('div');
+                //<py-script id="py-internal-0"></py-script>
+
                 this.outElem.className = 'py-terminal';
+                // document.getElementById('3') = this.appendChild(this.outElem)
                 this.appendChild(this.outElem);
                 if (this.isAuto()) {
                     this.classList.add('py-terminal-hidden');

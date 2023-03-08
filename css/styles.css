@@ -1,7 +1,7 @@
 body {
     /* animation: hue-rotate 6s infinite; */
-    background-image: url('/resources/main\ screen.png');
-    background-size: 100% 100%;
+     background-image: url('/resources/main\ screen.png');  
+    background-size: cover;
     /* -webkit-filter: grayscale(0%); */
     /* z-index: -1; */
   }
@@ -169,13 +169,12 @@ border: none;
 }
 
 .py-repl-box {
-    width: 50%;
+    width: 41vw;
     background-color: #011627;
     color: #d6deeb;
-    overflow: scroll;
-    overflow-anchor:auto;
-    height: 45%;
-    margin-top: 4.5%;
+    overflow: auto;
+    height: 43vh;
+    /* margin-top: 4.5%; */
     margin-left: 2.5%;
     
 }
@@ -360,16 +359,16 @@ textarea {
    bundled together at build time (by rollup?) */
 
 .py-terminal {
-    min-height: 10em;
-    width: 48.3%;
+    position: absolute;
+
     background-color: black;
     color: white;
-    padding: 0.5rem;
+
     overflow: auto;
-    height: 20%;
-    overflow: scroll;
-    margin-left: 2.5%;
-    margin-top: .5%;
+    width: 41vw;
+    height: 32vh;
+    margin-left: 1%;
+
     
 }
 
@@ -377,7 +376,7 @@ textarea {
     display: none;
 }
 
-.box {
+box {
     position: absolute;
     margin-left: 53%;
     margin-top: -22.5%;
@@ -385,3 +384,16 @@ textarea {
     height: 67%;
     background-color: white;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 43vw 42vw;
+    grid-template-rows: 43vh 33vh;
+    margin-top: 5%;
+    margin-left: 5%;
+
+  }
+  .grid-item {
+    background-color: crimson;
+    border: 1px solid white;
+  }

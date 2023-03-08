@@ -10,23 +10,37 @@
   </head>
 
   <body>
-    <p>Let's Write Some Code!</p>
     <py-config>
       [[runtimes]]
         src = "https://cdn.jsdelivr.net/pyodide/v0.22.0a3/full/pyodide.js"
         name = "pyodide-0.22.0a3"
         lang = "python"
     </py-config>
-    <py-script>
-      import pyodide
-      print("Python3 Terminal")
-      print(">>>")
-    </py-script>
+    <!-- <p>Let's Write Some Code!</p> -->
 
-    <py-repl>
+    <div class="grid-container">
+      <div class="grid-item">
+        <py-repl>
       
 
-    </py-repl>
-    <div class = "box"></div> 
+        </py-repl>
+        
+      </div>
+      <div class="grid-item" >2</div>
+      <div class="grid-item" id="3">
+
+<py-terminal auto="" class=""><div class="py-terminal">Python3 Terminal<br>&gt;&gt;&gt;<br></div></py-terminal>
+<div class="py-terminal">Python3 Terminal<br>&gt;&gt;&gt;<br></div>
+
+<py-terminal auto="" class=""><div class="py-terminal">Python3 Terminal<br>&gt;&gt;&gt;<br></div></py-terminal>
+
+
+
+      </div>  
+      <div class="grid-item">
+        4
+      </div>
+     
+    </div>
   </body>
 </html>
