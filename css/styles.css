@@ -1,3 +1,5 @@
+ 
+ 
  body {
      animation: hue-rotate 6s infinite; 
     /* background-image: url('/resources/one\ screen.jpeg');     */
@@ -458,10 +460,10 @@ box {
 }
 
 .arrow {
-    border: solid white;
+    border: solid wheat;
     border-width: 0 .7em .7em 0;
     display: inline-block;
-    padding: 1em;
+    padding: 2vh;
   }
   
   .right {

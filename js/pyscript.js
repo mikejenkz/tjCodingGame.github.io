@@ -1,12 +1,52 @@
+// var menu22 = [
+// "The year is 2148, the technology", 
+// "meant to send mankind into its", 
+// "golden age instead created",
+// "the world you see now, and", 
+// "in this world, code is all that", 
+// "matters. Those who know how to", 
+// "code control the security forces,",
+// "the money, the food production", 
+// "plants the entire world."
+// ],
+// i22 = 0, j22, z22, html,
+// e22 = document.getElementbyId('first'),
+// doChar = function() {
+//     e22.innerHTML += z22[j22++];
+//     if (j22 < z22.length) {
+//         setTimeout(doChar, 10);
+//     }
+//     else {
+//         e22.innerHTML += "<br/>";
+//         doItem();
+//     }
+// },
+// doItem = function() {
+//     if(i22 <menu22.length) {
+//         z22 = menu[i22++];
+//         j22 = 0;
+//         doChar();
+//     }
+// };
+// doItem();
+
+
+
+
+
+
+
 function myFunction() {
-    document.getElementById("first").innerHTML = "A faction known as shadow-coders controls everything, you’re not sure how many times you’ve tried to stop them. The shadow-coders have caught you in every attempt you’ve made in the past, and each time given you a fate worse than death: technical memory wipe. But you must try again..";
-    document.getElementById("first").id = "second"
+    document.getElementById("content1").menu = ['test']
+    document.getElementById("content1").id = "content2"
 
 }
 function myFunctionBack() {
     document.getElementById('second').innerHTML = "The year is 2148, the technology meant to send mankind into its golden age instead created the world you see now, and in this world, code is all that matters. Those who know how to code control the security forces, the money, the food production plants–the entire world."
     document.getElementById('second').id = "first"
 }
+
+
 
 var pyscript = (function (exports) {
     'use strict';
