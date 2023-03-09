@@ -6,6 +6,7 @@
   <title>Python Learning Game</title>
 
   <link rel="stylesheet" href="./css/styles.css" />
+  <script defer src="./js/script.js" type="text/javascript"></script>
   <script defer src="./js/pyscript.js" type="text/javascript"></script>
   </head>
 
@@ -26,46 +27,14 @@
         </py-repl>
         
       </div>
-      <div class="grid-item3">
-        <span id="content1" style = color:wheat;font-size:4vh;font-size:3.5vmin;font-family:papyrus;></span><span style="height:20px;width:20px;background-color:white;">&nbsp;</span>
-        <script>
-          var spot = "content1"
-          var menu = [
-          "The year is 2148, the technology", 
-          "meant to send mankind into its", 
-          "golden age instead created",
-          "the world you see now, and", 
-          "in this world, code is all that", 
-          "matters. Those who know how to", 
-          "code control the security forces,",
-          "the money, the food production", 
-          "plants the entire world."
-],
-            i = 0, j, item, html,
-            e = document.getElementById(spot),
-            doChar = function() {
-              e.innerHTML += item[j++];
-              if (j < item.length) {
-                setTimeout(doChar, 40);
-              }
-              else {
-                e.innerHTML += "<br/>";
-                doItem();
-              }
-            },
-            doItem = function() {
-              if (i < menu.length) {
-                item = menu[i++];
-                j = 0;
-                doChar();
-              }
-            };
-          doItem();
-        </script>
+      <div class="grid-item3" id ='grid3'>
+        <span id="content1" style = color:wheat;font-size:4vh;font-size:3.5vmin;font-family:papyrus;></span><span style="height:20px;width:20px;background-color:wheat;">&nbsp;</span>
         
         <!-- <img src="resources/Cyberpunk Backgrounds/Street lamp.png" class="img1"> -->
-        <span id = "content"></span>
-          <p onclick='myFunction()'><i class="arrow right"></i> </p>
+        
+        <span id = "textContent"></span>
+
+          <p onclick="setTimeout(myFunction(),4000)"><i class="arrow right"></i> </p>
           <p onclick='myFunctionBack()'><i class="arrow left"></i> </p>
       </div>
       
