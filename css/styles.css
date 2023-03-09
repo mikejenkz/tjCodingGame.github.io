@@ -416,7 +416,7 @@ box {
 
 
   .grid-item3 {
-     /* background-image: url('/resources/Cyberpunk Backgrounds/Street\ lamp.png');   */
+    background-image: url('/resources/streetlamp.png');
     background-size: 100% 100%;  
     background-color: transparent;
     filter: brightness(100%);
