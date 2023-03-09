@@ -410,7 +410,7 @@ box {
 
   }
   .grid-item {
-    background-color: transparent;
+    background-color: transparent; 
     border:  solid black;
   }
 
@@ -418,7 +418,7 @@ box {
   .grid-item3 {
     /* background-image: url('../resources/streetlamp.png'); */
     background-size: 100% 100%;  
-    background-color: transparent;
+    /* background-color: transparent; */
     filter: brightness(100%);
     border:  solid ;
     grid-column: 1;
@@ -431,7 +431,6 @@ box {
     font-size: xx-large;
     font-family: papyrus;
     overflow: hidden;
-    filter: brightness(145%);
     font-weight: bold;
   }
     /* white-space: nowrap;

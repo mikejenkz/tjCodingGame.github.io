@@ -1,4 +1,6 @@
 var spot = "content1"
+var type = "instruction"
+
 var imageScript = "url('../resources/streetlamp.png')"
 var allImages = [[imageScript],[imageScript],[imageScript]]
 var page = 0
@@ -6,32 +8,52 @@ document.getElementById('grid3').style.backgroundImage = allImages[page]
 var timer = false
 
 
-var menu = [[
-"The year is 2148, the technology meant to send mankind into its golden age instead created\
+var menu = [
+
+["The year is 2148, the technology meant to send mankind into its golden age instead created\
  the world you see now, and in this world, code is all that \
 matters. Those who know how tocode control the security forces,\
 the money, the food production plants the entire world."
-],["A faction known as shadow-coders controls everything,\
+],
+["A faction known as shadow-coders controls everything,\
 you’re not sure how many times you’ve tried to stop them.\
 The shadow-coders have caught you in every attempt you’ve made in the past,\
 and each time given you a fate worse than death:\
-technical memory wipe. But you must try again.."]];
+technical memory wipe. But you must try again.."], 
+["testtting"],
+[]
+]
+
+var pages = {'1': [menu[0],imageScript[0],type],
+'2': [menu[1],imageScript[1],type],
+}
 
 
 
- var i = 0, j, item, html,
-  e = document.getElementById(spot);
-  doChar = function() {
+function nextPage() {
+    i = 0, j, item, html,
+    e = document.getElementById(spot)
+    doItem();
+}
+
+var speedChar = 40
+
+
+var i = 0, j, item, html,
+e = document.getElementById(spot);
+
+function doChar() {
     e.innerHTML += item[j++];
     if (j < item.length) {
-      setTimeout(doChar, 40);
+      setTimeout(doChar, speedChar);
     }
     else {
       e.innerHTML += "<br/>";
       doItem();
     }
-  },
-  doItem = function() {
+  };
+
+function doItem() {
     
     if (i < menu[page].length) {
       item = menu[page][i++];
@@ -41,7 +63,7 @@ technical memory wipe. But you must try again.."]];
     return new Promise(resolve => { 
         setTimeout(() => { 
         resolve(timer = true); 
-    }, 50*item.length);
+    }, speedChar*item.length);
     })
     
   };
@@ -51,17 +73,27 @@ doItem();
 
 
 function myFunction() {
-    if (timer == true) {
+    
+    if ((timer == true) && (page+1 < menu.length)) {
         page++
         document.getElementById(spot).innerHTML = ""
-        document.getElementById(spot).style.backgroundImage = allImages[page]
+        document.getElementById('grid3').style.backgroundImage = allImages[page]
         timer=false
-        doItem();
+        speedChar = 40
+        nextPage()
+    }
+
+    else {
+        speedChar = 1
     }
 
     }
 
 function myFunctionBack() {
-    document.getElementById('second').innerHTML = "The year is 2148, the technology meant to send mankind into its golden age instead created the world you see now, and in this world, code is all that matters. Those who know how to code control the security forces, the money, the food production plants–the entire world."
-    document.getElementById('second').id = "first"
+
+    if(timer == true && page != 0) {
+        page--
+        document.getElementById(spot).innerHTML = menu[page]
+        document.getElementById('grid3').style.backgroundImage = allImages[page]
+    }
 }
