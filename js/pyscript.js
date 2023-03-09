@@ -37,7 +37,7 @@
 
 
 function myFunction() {
-    document.getElementById("content1").menu = ['test']
+    document.getElementById("content1").innerHTML = ""
     document.getElementById("content1").id = "content2"
 
 }
