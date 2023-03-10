@@ -1,7 +1,7 @@
 var spot = "content1"
 var type = "instruction"
 
-var imageScript = "url('../resources/streetlamp.png')"
+var imageScript = "url('./resources/streetlamp.png')"
 var allImages = [[imageScript],[imageScript],[imageScript],[imageScript],[imageScript]]
 var page = 0
 document.getElementById('grid3').style.backgroundImage = allImages[page]
