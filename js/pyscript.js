@@ -26824,6 +26824,7 @@ var pyscript = (function (exports) {
                 //<py-script id="py-internal-0"></py-script>
 
                 this.outElem.className = 'py-terminal';
+                
                 // document.getElementById('3') = this.appendChild(this.outElem)
                 this.appendChild(this.outElem);
                 if (this.isAuto()) {
@@ -26841,7 +26842,12 @@ var pyscript = (function (exports) {
             }
             // implementation of the Stdio interface
             stdout_writeline(msg) {
-                this.outElem.innerText += msg + '\n';
+
+                if(msg == "True") {
+                    this.outElem.innerText += "Congratulations!" + "\n"
+                }
+
+                this.outElem.innerText += ">" + msg + '\n';
                 if (this.autoShowOnNextLine) {
                     this.classList.remove('py-terminal-hidden');
                     this.autoShowOnNextLine = false;
@@ -26853,6 +26859,7 @@ var pyscript = (function (exports) {
         }
         return PyTerminal;
     }
+
 
     const logger$2 = getLogger('py-splashscreen');
     const AUTOCLOSE_LOADER_DEPRECATED = `

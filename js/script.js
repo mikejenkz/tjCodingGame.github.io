@@ -19,8 +19,8 @@ you’re not sure how many times you’ve tried to stop them. \
 The shadow-coders have caught you in every attempt you’ve made in the past, \
 and each time given you a fate worse than death: \
 technical memory wipe. But you must try again.."], 
-[["Instructions: In order to survive in this world, you have to re-learn the most fundamental coding skills, starting with strings. Strings are how text, words, and sentences are represented and controlled in code. print() allows you to project your code into the physical world. Write your code in the terminal and when you are done, run your program."], [" "], ["Example: print('this text in quotations is a string, and it will be printed to the physical world')"]],
-[["PROBLEM ONE"], [" "], ["Problem sets: intro to string data type, defining strings, printing strings."], [" "], ["Tutorial Problem 1: Write a program to say 'Hello World' and print it into the physical world."]]
+["Instructions: In order to survive in this world, you have to re-learn the most fundamental coding skills, starting with strings. Strings are how text, words, and sentences are represented and controlled in code. print() allows you to project your code into the physical world. Write your code in the terminal and when you are done, run your program.", " ", "Example: print('this text in quotations is a string, and it will be printed to the physical world')"],
+["PROBLEM ONE", " ", "Problem sets: intro to string data type, defining strings, printing strings.", " ", "Tutorial Problem 1: Write a program to say 'Hello World' and print it into the physical world."]
 ]
 var pages = {1: [menu[0],imageScript[0],type],
 2: [menu[1],imageScript[1],type],
