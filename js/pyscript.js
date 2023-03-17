@@ -13401,6 +13401,7 @@ var pyscript = (function (exports) {
                 translate: "no",
                 contenteditable: !this.state.facet(editable) ? "false" : "true",
                 class: "cm-content",
+                id: "contentDoe",
                 style: `${browser.tabSize}: ${this.state.tabSize}`,
                 role: "textbox",
                 "aria-multiline": "true"
@@ -26844,10 +26845,10 @@ var pyscript = (function (exports) {
             stdout_writeline(msg) {
 
                 if(msg == "True") {
-                    this.outElem.innerText += "Congratulations!" + "\n"
+                    this.outElem.innerText += "\n" + "Congratulations!" + "\n"
                 }
 
-                this.outElem.innerText += ">" + msg + '\n';
+                this.outElem.innerText = "Running Test Cases" + '\n' + ">" + msg + '\n';
                 if (this.autoShowOnNextLine) {
                     this.classList.remove('py-terminal-hidden');
                     this.autoShowOnNextLine = false;
